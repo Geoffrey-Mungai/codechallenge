@@ -15,4 +15,4 @@ Run each file in node js '' node speed.js
 
 ## Author: Geoffrey Mungai
 incase you're stuck or experience any errors flag it.
-you can reach me at my email on Geoffreymunfai1@gmail.com
+you can reach me at my email on Geoffreymungai1@gmail.com
