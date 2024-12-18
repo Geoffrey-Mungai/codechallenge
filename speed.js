@@ -1,26 +1,28 @@
 
-function calculatepoints(speed) {
-    const limit = 70;
-    const points = 2;
+function calculatePoints(speed) {
+    const limit = 70; // Speed limit in km/s
+    const points = 2; // Points for every 5 km/s over the limit
+    let speeding;
+    if (speed <= limit) {//compares the speed and the speed limit
+        speeding = "OK"; // No points if speed is within or below the limit
+    }else  {
 
-    if (speed <=limit) {
-        speeding ="OK";
-    } else {
+    // Calculate excess speed
+    const excessSpeed = speed - limit;
 
-        const excesSpeed = speed - limit ;
+    // Calculate points (2 points for every 5 km/s)
+     speeding = Math.floor(excessSpeed / 5) * points;  //math.floor rounds off to make sure the speed is near whole number not points
+     
+     }if(speeding > 2){
+        alert("LICENCE SUSPENDED! ")
+     }
 
-        speeding = Math.Floor (excessSpeed / 5) * points;
-
-    }if(speeding > 2){
-        alert("LICENSE SUSPENDED ! ")
-    }
+    return speeding;
     
-    
-return speeding;
-
-
 }
 
-let speed = prompt("Please enter the current speed ot the vehicle: ");
-calculatepoints(speed);
-alert('The driver spending points is ${speeding} points');
+// Example usage
+// Replace with the driver's speed+
+let speed = parseInt(prompt("Please enter the current speed of the vehicle: "));//prompt entry of the vehicle's speed in a pop up massege box
+calculatePoints(speed);
+alert(`The driver speending  points is  ${speeding} points`);
