@@ -1,4 +1,3 @@
-
 function calculatePoints(speed) {
     const limit = 70; // Speed limit in km/s
     const points = 2; // Points for every 5 km/s over the limit
@@ -26,3 +25,5 @@ function calculatePoints(speed) {
 let speed = parseInt(prompt("Please enter the current speed of the vehicle: "));//prompt entry of the vehicle's speed in a pop up massege box
 calculatePoints(speed);
 alert(`The driver speending  points is  ${speeding} points`);
+
+
